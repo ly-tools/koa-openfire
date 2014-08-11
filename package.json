@@ -1,0 +1,30 @@
+{
+  "name": "koa-openfire",
+  "version": "0.0.1",
+  "description": "A koa middleware to build web IM with openfire",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "koa",
+    "middleware",
+    "openfire",
+    "xmpp"
+  ],
+  "author": "skyinlayer",
+  "license": "MIT",
+  "dependencies": {
+    "raw-body": "^1.3.0",
+    "underscore": "^1.6.0",
+    "xml2js": "^0.4.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/LingyuCoder/koa-openfire.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LingyuCoder/koa-openfire/issues"
+  },
+  "homepage": "https://github.com/LingyuCoder/koa-openfire"
+}
