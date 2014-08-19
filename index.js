@@ -41,14 +41,19 @@ function boshRequest(ret, config) {
 	return function(done) {
 		var boshReq = http.request(config, function(boshRes) {
 			boshRes.on('data', function(data) {
-				data = data.toString();
-				cache += data;
+				cache += data.toString();
+			});
+			boshRes.on('end', function() {
 				parser.parseString(cache, function(err, result) {
 					if (!err) {
 						done(null, cache);
 					}
+					done(err);
 				});
 			});
+		});
+		boshReq.on('error', function(e) {
+			done(e);
 		});
 		boshReq.end(ret);
 	};
